@@ -13,13 +13,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Primary
-// Default profile is active when there is no other profile active
-@Profile({"en", "default"})
-public class PrimaryGreetingService implements GreetingService {
+@Profile("de")
+public class PrimaryGermanGreetingService implements GreetingService {
 
 	@Override
 	public String sayGreeting() {
-		return "Hello - English Primary Greeting Service";
+		return "Hello - Primary German Greeting Service";
 	}
 
 }
