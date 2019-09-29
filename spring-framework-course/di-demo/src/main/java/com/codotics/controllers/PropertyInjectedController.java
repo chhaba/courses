@@ -19,7 +19,7 @@ public class PropertyInjectedController {
 	@Autowired
 	// We can use the Qualifier or object name match the service implementation name
 	// Using Qualifier is recommended
-//	@Qualifier("greetingServiceImpl")
+	@Qualifier("greetingServiceImpl")
 	public GreetingService greetingServiceImpl;
 	
 	public String sayHello() {
