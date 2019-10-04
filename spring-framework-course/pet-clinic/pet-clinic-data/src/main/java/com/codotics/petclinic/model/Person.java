@@ -7,7 +7,7 @@ package com.codotics.petclinic.model;
  * @author Codotics Technologies
  *
  */
-public class Person {
+public class Person extends BaseEntity{
 
 	private String firstName;
 	private String lastName;
