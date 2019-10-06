@@ -10,8 +10,6 @@ import com.codotics.petclinic.model.Owner;
 import com.codotics.petclinic.model.Vet;
 import com.codotics.petclinic.services.OwnerService;
 import com.codotics.petclinic.services.VetService;
-import com.codotics.petclinic.services.map.OwnerServiceMap;
-import com.codotics.petclinic.services.map.VetServiceMap;
 
 /**
  * @author Codotics Technologies
@@ -23,9 +21,9 @@ public class DataLoader implements CommandLineRunner {
 	private final OwnerService ownerService;
 	private final VetService vetService;
 
-	public DataLoader() {
-		ownerService = new OwnerServiceMap();
-		vetService = new VetServiceMap();
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 	@Override

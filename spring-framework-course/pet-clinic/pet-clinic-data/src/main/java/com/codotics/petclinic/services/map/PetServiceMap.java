@@ -5,6 +5,8 @@ package com.codotics.petclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.codotics.petclinic.model.Pet;
 import com.codotics.petclinic.services.CrudService;
 
@@ -12,6 +14,7 @@ import com.codotics.petclinic.services.CrudService;
  * @author Codotics Technologies
  *
  */
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
 
 	@Override

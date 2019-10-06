@@ -5,6 +5,8 @@ package com.codotics.petclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.codotics.petclinic.model.Owner;
 import com.codotics.petclinic.services.OwnerService;
 
@@ -12,6 +14,7 @@ import com.codotics.petclinic.services.OwnerService;
  * @author Codotics Technologies
  *
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
