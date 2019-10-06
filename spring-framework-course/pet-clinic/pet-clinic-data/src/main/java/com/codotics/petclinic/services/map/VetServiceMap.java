@@ -6,13 +6,13 @@ package com.codotics.petclinic.services.map;
 import java.util.Set;
 
 import com.codotics.petclinic.model.Vet;
-import com.codotics.petclinic.services.CrudService;
+import com.codotics.petclinic.services.VetService;
 
 /**
  * @author Codotics Technologies
  *
  */
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
 	public Vet save(Vet object) {

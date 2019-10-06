@@ -6,13 +6,13 @@ package com.codotics.petclinic.services.map;
 import java.util.Set;
 
 import com.codotics.petclinic.model.Owner;
-import com.codotics.petclinic.services.CrudService;
+import com.codotics.petclinic.services.OwnerService;
 
 /**
  * @author Codotics Technologies
  *
  */
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
 	public Set<Owner> findAll() {
@@ -48,6 +48,12 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	public Owner save(Owner object) {
 		// TODO Auto-generated method stub
 		return super.save(object.getId(), object);
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
