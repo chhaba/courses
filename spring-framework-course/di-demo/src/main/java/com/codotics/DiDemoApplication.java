@@ -3,7 +3,6 @@ package com.codotics;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 import com.codotics.controllers.ConstructorInjectedController;
 import com.codotics.controllers.MyController;
@@ -11,7 +10,6 @@ import com.codotics.controllers.PropertyInjectedController;
 import com.codotics.controllers.SetterInjectedController;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.codotics", "com"})
 public class DiDemoApplication {
 
 	public static void main(String[] args) {
