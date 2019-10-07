@@ -30,12 +30,6 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements Crud
 	}
 
 	@Override
-	public Pet save(Long id, Pet object) {
-		// TODO Auto-generated method stub
-		return super.save(id, object);
-	}
-
-	@Override
 	public void deleteById(Long id) {
 		// TODO Auto-generated method stub
 		super.deleteById(id);
@@ -50,7 +44,7 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements Crud
 	@Override
 	public Pet save(Pet object) {
 		// TODO Auto-generated method stub
-		return super.save(object.getId(), object);
+		return super.save(object);
 	}
 
 }
