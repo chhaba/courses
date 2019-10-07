@@ -4,3 +4,9 @@ codotics:
       username: Yaml User Name
       password: Yaml Password
       url: Yaml URL
+
+---
+spring:
+  profiles:
+    active: de
+      
