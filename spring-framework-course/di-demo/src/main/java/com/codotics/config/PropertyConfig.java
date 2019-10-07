@@ -3,10 +3,12 @@
  */
 package com.codotics.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import com.codotics.examplebeans.FakeDataSource;
@@ -18,6 +20,9 @@ import com.codotics.examplebeans.FakeDataSource;
 @Component
 @PropertySource("classpath:datasource.properties")
 public class PropertyConfig {
+
+	@Autowired
+	Environment env;
 
 	@Value("${codotics.username}")
 	String user;
@@ -31,7 +36,7 @@ public class PropertyConfig {
 	@Bean
 	public FakeDataSource fakeDataSource() {
 		FakeDataSource fds = new FakeDataSource();
-		fds.setUser(user);
+		fds.setUser(env.getProperty("USERNAME"));
 		fds.setPassword(password);
 		fds.setUrl(url);
 		return fds;
