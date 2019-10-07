@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.codotics.controllers.MyController;
 import com.codotics.examplebeans.FakeDataSource;
+import com.codotics.examplebeans.FakeJmsBroker;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -18,6 +19,11 @@ public class DiDemoApplication {
 		System.out.println(fakeDataSource.getUser());
 		System.out.println(fakeDataSource.getPassword());
 		System.out.println(fakeDataSource.getUrl());
+
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+		System.out.println(fakeJmsBroker.getUserName());
+		System.out.println(fakeJmsBroker.getPassword());
+		System.out.println(fakeJmsBroker.getUrl());
 	}
 
 }
