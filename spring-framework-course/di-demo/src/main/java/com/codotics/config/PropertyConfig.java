@@ -12,6 +12,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
+import com.codotics.examplebeans.CustomProperties;
 import com.codotics.examplebeans.FakeDataSource;
 import com.codotics.examplebeans.FakeJmsBroker;
 
@@ -45,10 +46,20 @@ public class PropertyConfig {
 	@Value("${codotics.jms.url}")
 	String jmsUrl;
 
+	@Value("${codotics.custom.properties.username}")
+	String customUserName;
+
+	@Bean
+	public CustomProperties customProperties() {
+		CustomProperties cp = new CustomProperties();
+		cp.setCustomUserName(customUserName);
+		return cp;
+	}
+
 	@Bean
 	public FakeDataSource fakeDataSource() {
 		FakeDataSource fds = new FakeDataSource();
-		fds.setUser(env.getProperty("USERNAME"));
+		fds.setUser(user);
 		fds.setPassword(password);
 		fds.setUrl(url);
 		return fds;

@@ -2,9 +2,11 @@ package com.codotics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.system.ApplicationPid;
 import org.springframework.context.ApplicationContext;
 
 import com.codotics.controllers.MyController;
+import com.codotics.examplebeans.CustomProperties;
 import com.codotics.examplebeans.FakeDataSource;
 import com.codotics.examplebeans.FakeJmsBroker;
 
@@ -24,6 +26,10 @@ public class DiDemoApplication {
 		System.out.println(fakeJmsBroker.getUserName());
 		System.out.println(fakeJmsBroker.getPassword());
 		System.out.println(fakeJmsBroker.getUrl());
+
+		CustomProperties cp = (CustomProperties) ctx.getBean(CustomProperties.class);
+
+		System.out.println(cp.getCustomUserName());
 	}
 
 }
