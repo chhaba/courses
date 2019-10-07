@@ -1,0 +1,6 @@
+codotics:
+  custom:
+    properties:
+      username: Yaml User Name
+      password: Yaml Password
+      url: Yaml URL

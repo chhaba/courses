@@ -49,10 +49,18 @@ public class PropertyConfig {
 	@Value("${codotics.custom.properties.username}")
 	String customUserName;
 
+	@Value("${codotics.custom.properties.password}")
+	String customPassword;
+
+	@Value("${codotics.custom.properties.url}")
+	String customUrl;
+
 	@Bean
 	public CustomProperties customProperties() {
 		CustomProperties cp = new CustomProperties();
 		cp.setCustomUserName(customUserName);
+		cp.setCustomPassword(customPassword);
+		cp.setCustomURL(customUrl);
 		return cp;
 	}
 

@@ -30,6 +30,8 @@ public class DiDemoApplication {
 		CustomProperties cp = (CustomProperties) ctx.getBean(CustomProperties.class);
 
 		System.out.println(cp.getCustomUserName());
+		System.out.println(cp.getCustomPassword());
+		System.out.println(cp.getCustomURL());
 	}
 
 }

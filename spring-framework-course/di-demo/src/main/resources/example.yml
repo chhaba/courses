@@ -1,0 +1,39 @@
+#This is a comment
+
+Name: John
+
+Names: 
+    - John
+    - Paul
+    - Ringo
+
+pound_sign: "#"
+
+book:
+    author: Jow Buck 
+    publisher: Random House
+    
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no, #No, false, FALSE
+
+string_val: "This is it's quote"
+
+colon_string: "my courses: one two three"
+
+include_new_lines: | 
+    asdf asdf
+    abcd wedf
+    fgtr hgyt
+    
+ignore_new_lines: >
+    this is 
+    just one
+    big and 
+    long line
+    
+ 
